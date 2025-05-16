@@ -1,0 +1,138 @@
+.calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgba(20, 20, 20, 0.778);
+    box-shadow: 0px 0px 10px rgb(132, 132, 132);
+    border-radius: 15px;
+    padding: 20px;
+    width: 360px;
+}
+.output{
+    width: 100%;
+    >.myinp{
+        width: 100%;
+        border-radius: 12px;
+        background-color: inherit;
+        height: 70px;
+        padding-inline: 10px;
+        color: white;
+        font-size: 28px;
+        text-align: right;
+    }
+}
+.buttons{
+    gap: 12px 20px;
+    grid-template-columns: repeat(4 , 1fr);
+    display: grid;
+    border-radius: 16px;
+    margin-top: 20px;
+    padding: 20px 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 5px rgb(66, 66, 66);
+    >.btn{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 18px;
+        background-color: inherit;
+        box-shadow: 0 5px  10px  rgb(66, 66, 66);
+        border: none;
+        color: white;
+        transition: .4s;
+
+        &:hover{
+            /* box-shadow: none; */
+            box-shadow: 0 0 10px black;
+        }
+    }
+    .green{
+        color: rgb(87, 207, 87);
+    }
+    .equls{
+        background-color: orange;
+    }
+}
+.myfoot{
+            width: 230px;
+            height: 230px;
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            &:hover{
+                >img, &::before{
+                    animation-play-state: paused;
+                }
+                >figcaption{
+                    bottom: -30px;
+                    opacity: 1;
+                }
+                >a{
+                    right: 150%;
+                }
+            }
+            >img, &::before {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            >img{
+                object-fit: cover;
+                animation: fancy1 ease-out infinite alternate 5s;
+            }
+            &::before{
+                content: '';
+                background-color: mediumorchid;
+                animation: fancy2 ease-out infinite alternate 5s;
+            }
+            >figcaption{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 23px;
+                text-transform: capitalize;
+                left: 0;
+                bottom: 0;
+                opacity: 0;
+                transition: 1s;
+                color: mediumorchid;
+            }
+            a{
+                font-size: 25px;
+                color: mediumorchid;
+                position: absolute;
+                right: 50%;
+                text-decoration: none;
+                transition: 1s;
+                &:nth-of-type(1){
+                    top: 20%;
+                    transition-delay: 0.2s;
+                }
+                &:nth-of-type(2){
+                    top: 40%;
+                    transition-delay: 0.4s;
+                }
+                &:nth-of-type(3){
+                    top: 60%;
+                    transition-delay: 0.6s;
+                }
+                &:nth-of-type(4){
+                    top: 80%;
+                    transition-delay: 0.8s;
+                }
+            }
+        }
+        @keyframes fancy1{
+            0%{border-radius:51% 49% 25% 75% / 46% 31% 69% 54% ;}
+            50%{border-radius: 31% 69% 15% 85% / 68% 64% 36% 32% ;}
+            100%{border-radius:18% 82% 76% 24% / 66% 45% 55% 34%  ;}
+        }
+        @keyframes fancy2{
+            0%{border-radius:31% 69% 15% 85% / 68% 64% 36% 32% ;}
+            50%{border-radius:18% 82% 76% 24% / 66% 45% 55% 34%  ;}
+            100%{border-radius:51% 49% 25% 75% / 46% 31% 69% 54%  ;}
+        }
