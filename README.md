@@ -1,7 +1,7 @@
 # calculator
 - [Demo Project](https://mohananoruztabar.github.io/bankcard/index1-js.html)
 
-- 
+- ![Image](https://github.com/user-attachments/assets/03ba1687-92e3-4a31-8376-9e0fd5b9b842)
 
 -🙋🏽‍♀️ Developed by Mohana Noruztabar
 
